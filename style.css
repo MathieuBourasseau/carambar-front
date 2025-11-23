@@ -1,0 +1,20 @@
+:root {
+    --color-yellow: #FEDB27;
+    --color-pink: #E10079;
+    --color-white: #FFFFFF;
+}
+
+body {
+    background-color: var(--color-yellow);
+}
+
+header {
+    background-color: #E10079;
+}
+
+h1 {
+    font-weight: bold;
+    color : var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+}
