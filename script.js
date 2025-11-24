@@ -1,5 +1,5 @@
 // Identify in the DOM the elements required
-const btnElt = document.querySelector('#joke-btn');
+const btnElt = document.querySelector('.joke-btn');
 const jokeContainerElt = document.querySelector('.joke-container');
 
 // API URL
@@ -11,7 +11,7 @@ const getRandomJoke = async () => {
         // Fetch to the back end
         const response = await fetch(API);
 
-        if(!response){
+        if(!response.ok){
             throw new Error(`Erreur serveur : ${response.status}`)
         }
 
