@@ -9,7 +9,7 @@ Cette landing page a pour objectif de divertir l'utilisateur en affichant une bl
 - Design : Respect de la charte graphique de la marque (Rose & Jaune).
 - Responsive : Interface adaptée aux mobiles, tablettes et ordinateurs.
 - Sécurité : Protection contre les failles XSS lors de l'affichage du texte (utilisation de textContent).
-- Expérience-  Utilisateur : Gestion des états de chargement et des erreurs serveur.
+- Expérience Utilisateur : Gestion des états de chargement et des erreurs serveur.
 
 ## 🛠️ Stack Technique
 
@@ -24,16 +24,15 @@ Pour faire fonctionner ce projet sur votre machine, vous devez avoir le backend 
 1. Cloner le projet
 
 ```bash
-git clone [https://github.com/VOTRE_PSEUDO/carambar-front.git](https://github.com/VOTRE_PSEUDO/carambar-front.git)
+git clone [https://github.com/MathieuBourasseau/carambar-front.git](https://github.com/MathieuBourasseau/carambar-front.git)
 cd carambar-front
 ```
-
 
 2. Configurer l'API
 Ouvrez le fichier script.js et vérifiez la variable API_URL.
 
 - En local : http://localhost:3001/api/v1/jokes/random
-- En production :
+- En production : https://carambar-api-1lrv.onrender.com/api/v1/jokes/random
 
 3. Lancer le site
 Ouvrez simplement le fichier index.html dans votre navigateur.
@@ -43,6 +42,5 @@ Ouvrez simplement le fichier index.html dans votre navigateur.
 
 ## 🔗 Liens Utiles
 
-Repository Backend : https://github.com/MathieuBourasseau/carambar-api
-
-Site en ligne (GitHub Pages) : https://mathieubourasseau.github.io/carambar-front/
+- Repository Backend : https://github.com/MathieuBourasseau/carambar-api
+- Site en ligne (GitHub Pages) : https://mathieubourasseau.github.io/carambar-front/

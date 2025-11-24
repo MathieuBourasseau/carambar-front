@@ -28,6 +28,7 @@ const getRandomJoke = async () => {
         // Answer joke creation
         const jokeAnswerElt = document.createElement('p');
         jokeAnswerElt.style.color = 'var(--color-pink)';
+        jokeAnswerElt.style.textAlign = 'center';
         jokeAnswerElt.textContent = randomJoke.answer;
 
         // Adding elements to the div
