@@ -24,7 +24,7 @@ Pour faire fonctionner ce projet sur votre machine, vous devez avoir le backend 
 1. Cloner le projet
 
 ```bash
-git clone [https://github.com/MathieuBourasseau/carambar-front.git](https://github.com/MathieuBourasseau/carambar-front.git)
+git clone git@github.com:MathieuBourasseau/carambar-front.git
 cd carambar-front
 ```
 
