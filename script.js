@@ -1,12 +1,60 @@
-// Je veux afficher une blague aléatoire quand je clique sur le bouton
-// Pour cela j'ai besoin de : 
-// cibler mon bouton + cibler la zone où je souhaite que la blague apparaisse
-// créer un événement qui se déclenche au clic sur le bouton
-// cet événement va interroger le back sur la route dédiée à la blague random 
-// puis retourner la réponse en json 
-// Je dois ensuite afficher cette réponse.
-
+// Identify in the DOM the elements required
 const btnElt = document.querySelector('#joke-btn');
 const jokeContainerElt = document.querySelector('.joke-container');
 
+// API URL
 const API = "http://localhost:3001/api/v1/jokes/random";
+
+const getRandomJoke = async () => {
+    try {
+        
+        // Fetch to the back end
+        const response = await fetch(API);
+
+        if(!response){
+            throw new Error(`Erreur serveur : ${response.status}`)
+        }
+
+        const randomJoke = await response.json();
+
+        // Emptying the content of the div
+        jokeContainerElt.innerHTML='';
+
+        // Title joke creation
+        const jokeTitleElt = document.createElement('h3');
+        jokeTitleElt.style.color = 'var(--color-dark-blue)';
+        jokeTitleElt.textContent = randomJoke.question;
+
+        // Answer joke creation
+        const jokeAnswerElt = document.createElement('p');
+        jokeAnswerElt.style.color = 'var(--color-pink)';
+        jokeAnswerElt.textContent = randomJoke.answer;
+
+        // Adding elements to the div
+        jokeContainerElt.appendChild(jokeTitleElt);
+        jokeContainerElt.appendChild(jokeAnswerElt);
+
+
+    } catch (error) {
+
+        console.error("Erreur Fetch :", error);
+        jokeContainerElt.innerHTML='';
+
+        // Title error creation
+        const errorTitleElt = document.createElement('h3');
+        errorTitleElt.style.color='red';
+        errorTitleElt.textContent="Aïe aïe 😓"
+
+        // Text error creation
+        const errorTextElt = document.createElement('p');
+        errorTextElt.textContent="Impossible d'afficher une blague aléatoire actuellement..."
+
+        // Adding elements to the div
+        jokeContainerElt.appendChild(errorTitleElt);
+        jokeContainerElt.appendChild(errorTextElt);
+
+    }
+}
+
+// Event onclick added to the button
+btnElt.addEventListener('click', getRandomJoke);

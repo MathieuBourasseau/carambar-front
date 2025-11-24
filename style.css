@@ -73,7 +73,7 @@ h3 {
     color: var(--color-dark-blue)
 }
 
-.discover-joke {
+.joke-btn {
     background-color: var(--color-dark-blue);
     border : none;
     padding: var(--default-spacing);
