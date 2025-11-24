@@ -9,3 +9,4 @@
 const btnElt = document.querySelector('#joke-btn');
 const jokeContainerElt = document.querySelector('.joke-container');
 
+const API = "http://localhost:3001/api/v1/jokes/random";
