@@ -3,7 +3,7 @@ const btnElt = document.querySelector('.joke-btn');
 const jokeContainerElt = document.querySelector('.joke-container');
 
 // API URL
-const API = "http://localhost:3001/api/v1/jokes/random";
+const API = "https://carambar-api-1lrv.onrender.com/api/v1/jokes/random";
 
 const getRandomJoke = async () => {
     try {
