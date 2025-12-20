@@ -25,10 +25,12 @@ header {
 
 main {
     flex: 1;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: var(--default-spacing);
+    gap: 2rem
 }
 
 .card {
@@ -74,6 +76,12 @@ h1 {
 h3 {
     color: var(--color-dark-blue);
     text-align: center;
+}
+
+span {
+    max-width: 500px;
+    text-align: center;
+    color: var(--color-pink)
 }
 
 .joke-btn {
